@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: store
+spec:
+  type: LoadBalancer
+  selector:
+    app: store
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
